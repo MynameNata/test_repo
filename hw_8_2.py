@@ -19,6 +19,11 @@ class TestYearLeap(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.year_l(year='hkjjljljk')
 
+    @unittest.expectedFailure
+    def test_enter_alpha(self):
+        self.assertEqual(self.year_l(year='dsdsfsdfs'), True)
+
+
 
 
 if __name__ == '__main__':
